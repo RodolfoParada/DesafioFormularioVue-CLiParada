@@ -1,17 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    
+   <formulario-web @datos-enviados="agregarDatos"/>
+  <MensajeTable :datos="datos"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FormularioWeb from './components/FormularioWeb.vue'
+import MensajeTable from './components/MensajeTable.vue';
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    FormularioWeb,
+    MensajeTable
+  },
+  data() {
+    return {
+      datos: [],
+    };
+  },
+  methods: {
+    agregarDatos(datos) {
+      this.datos.push(datos);
+    },
   }
 }
 </script>
