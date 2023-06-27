@@ -1,5 +1,5 @@
 # desafio
-entraga uno
+entraga unos
 ## Project setup
 ```
 npm install
